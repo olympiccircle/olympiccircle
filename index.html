@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- <html> -->
+<title>Page Title</title>
+<head> 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" id ="bootstrap-css" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href ="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <body>
+
+    <div class = "header-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./resources/header-img.PNG" alt="" width="45">
+              </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Abous us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Donations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+            </ul>
+            <div class="d-flex flex-row-reverse bd-highlight">
+            <select ng-model='discussionsSelect' class='form-control'>
+                <option value="EN">🇺🇸&emsp;English</option>
+                <option value="UA">🇺🇦&emsp;Ukrainian</option>
+                <option value="RU">🇷🇺&emsp;Russian</option> 
+              </select>
+              </div>
+          </div>
+        </div>
+    </nav>
+    </div>
+<!-- ------------------------------------------------------------ -->
+<div class="MainDonateTarget">
+<div class="container p-3 px-5" id="donate-row">
+        <div class="row gx-1">
+          <div class="col">
+           <div id="HelpMykolaiv" class="text p-3">Help Mykolaiv now</div>
+          </div>
+          <div class="col" id = "rightCardQuadroSection">
+          <div class="row ">
+            <div class="col">
+                <div class="p-3"> 
+                    <div id = "TitleQuadroSection">Головна мета: </div>
+                    <div id = "TextQuadroSection">ГКвадрокоптер DJI Mavic 3 Fly More Combo для військових 
+                        на херсонському напрямку </div>
+                
+                        <div id = "PriceQuadroSection">120 000</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                <img src="./resources/dji_mavic_3_cine_premium_combo_03_l.jpeg" id = "ImageQuadroSection" alt="" width=100%></img>   
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+    </div>      
+<!-- ------------------------------------------------------------ -->
+
+<div class="container-carousel">
+    <div class="row d-flex justify-content-center mt-">
+        <div class="col-md-6">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> 
+                        <div id ="DonationDescriptionHrn">
+                            <div> БЛАГОДІЙНИЙ ФОНД “ОЛІМПІЙСЬКЕ КОЛО”</div>
+                            <div>ЄДРПОУ 44818535</div>
+                            <div>Рахунок UA373510050000026005879147002</div>
+                            <div>АКЦІОНЕРНЕ ТОВАРИСТВО ‘’УКРСІББАНК’’</div>
+                    </div>
+                    <button type="button" onclick="copyEvent('DonationDescriptionHrn')">
+                        <img src="./resources/copy.png" width="30px"/>
+                    </button>
+                    </div>
+                    <div class="carousel-item"> 
+                        <div id ="DonationDescriptionEu">
+                            <div> CHARITY FUND "THE OLYMPIC CIRCLE"</div>
+                            <div> Currency of account EUR</div>
+                            <div>CODE: 44818535</div>
+                            <div>IBAN: UA043510050000026008879147009</div>
+                            <div>Bank name: JOINT STOCK COMPANY "UKRSIBBANK"</div>
+                            <div>Beneficiary bank
+                            (JSC "UKRSIBBANK") 07205696 UKRSIBBANK
+                            ANDRIIVSKA STREET 2/12 KYIV, UKRAINE SWIFT code: KHABUA2K</div>
+                            <div>Intermediary bank
+                            BNP PARIBAS SA Paris, FRANCE SWIFT code: BNPAFRPP</div>
+                    </div>
+                    <button type="button" onclick="copyEvent('DonationDescriptionEu')">
+                        <img src="./resources/copy.png" width="30px"/>
+                    </button>  
+                </div>
+                    <div class="carousel-item">
+                        <div id ="DonationDescriptionUsd">
+                            <div>CHARITY FUND "THE OLYMPIC CIRCLE"</div>
+                            <div>Currency of account: USD</div>
+                            <div>CODE: 44818535</div>
+                            <div>IBAN: UA743510050000026008879147010</div>
+                            <div>Bank name: JOINT STOCK COMPANY "UKRSIBBANK"</div>
+                            <div>Beneficiary bank:
+                            (JSC "UKRSIBBANK") 020061151200138 UKRSIBBANK
+                            ANDRIIVSKA STREET 2/12 KYIV, UKRAINE SWIFT code: KHABUA2K</div>
+                            <div>Intermediary bank
+                            BNP PARIBAS U.S.A. - New York Branch New York , USA SWIFT code: BNPAUS3N</div>
+                        </div>
+                        <button type="button" onclick="copyEvent('DonationDescriptionUsd')">
+                            <img src="./resources/copy.png" width="30px"/>
+                        </button>
+                    </div>
+
+                    <div class="carousel-item"> 
+                        <div id ="DonationDescriptionPayPal">
+                            Olympiccircle@gmail.com
+
+                            +380937070481
+                        
+                            PayPal logo with link
+                        </div>
+                    </div>
+                    <div class="carousel-item"> 
+                        <div id ="DonationDescriptionBtc">
+                            1C4RGzyJmQWp6ARWNMRDfJgX4ufwjdmBQC
+                        </div>
+                        <button type="button" onclick="copyEvent('DonationDescriptionBtc')">
+                            <img src="./resources/copy.png" width="30px"/>
+                        </button>
+                    </div>
+                </div>
+                <ol class="carousel-indicators list-inline">
+                    <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-bs-slide-to="0" data-bs-target="#myCarousel"> <img src="./resources/hryvna.png" class="img-fluid rounded" /> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-1" data-bs-slide-to="1" data-bs-target="#myCarousel"> <img src="./resources/euro.png" class="img-fluid rounded" /> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-bs-slide-to="2" data-bs-target="#myCarousel"> <img src="./resources/dollar.png" class="img-fluid rounded" /> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-3" data-bs-slide-to="3" data-bs-target="#myCarousel"> <img src="./resources/pay-pal.png" class="img-fluid rounded" /> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-4" data-bs-slide-to="4" data-bs-target="#myCarousel"> <img src="./resources/bitcoin.png" class="img-fluid rounded" /> </a> </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------ -->
+<div class="container-WhoWeAre" id ="container-WhoWeAre">
+    <div class="row d-flex justify-content-center mt-">
+        <div id = "lang-WhoWeAre_Title">Благодійний фонд "Олімпійське коло"</div>
+        <div id = "lang-WhoWeAre_Description">
+            Хто ми? Благодійний фонд "Олімпійське коло" - організація, створена спортсменами,
+            щоб допомогати Миколаєву в боротьбі з російськими окупантами.</p>
+        </div>
+    </div>
+    <div id = "whoWeAreImage">
+        <img src="./resources/WhoWeAreImage.jpeg">
+    </div>
+
+
+    <div class="container p-3 px-5" id="whoWeAreExperience-row">
+        <div class="row gx-1">
+          <div class="col">
+           <div id="lang-experienceTitle" class="lang-experienceTitle text p-3">Наш досвід</div>
+           <div id="lang-experienceDescription" class="lang-experienceDescription text p-3">
+            Ми маємо тримісячний досвід роботи в умовах воєнних дій.
+            Зараз ми обʼєднали зусилля волонтерів в "Олімпійське коло", тому що як
+            спортсмени розуміємо, тільки командна робота принесе успіх
+        </div>
+          </div>
+          <div class="col" id = "rightCardMykolaivImgSection">
+                <div class="p-3">
+                <img src="./resources/experienceGroup.jpeg" id = "ImageMykolaiv" alt="" width=100%></img>   
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="container p-3 px-5" id="whoWeAreLoveMykolaiv-row">
+            <div class="row gx-1">
+
+              <div class="col" id = "rightCardMykolaivImgSection">
+                    <div class="p-3">
+                    <img src="./resources/LoveMykolaiv.jpeg" id = "ImageMykolaiv" alt="" width=100%></img>   
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div id="lang-loveMykolaivTitle" class="lang-loveMykolaivTitle text p-3">Ми любимо Миколаїв</div>
+                    <div id="lang-loveMykolaivDescription" class="lang-loveMykolaivDescription text p-3">
+                     Ми просто миколаївці, які люблять своє місто. Кожного ранку ми прокидаємося з такою
+                     думкою, що й ви: коли закінчиться війна. А далі, робимо, що й кожен українець на 
+                     своєму місці - боремося за перемогу </div>
+                 
+                   </div>
+              </div>
+              </div>
+</div>
+<!-- 
+<div class="container p-0 px-1" id="whoWeAreWeHelp-row">
+    <div class="row gx-1" id="WeHelpSection">
+
+        <div class="col">
+            <div id="lang-WeHelpTitle" class="lang-WeHelpTitle text p-1">Ми допомогаэмо</div>
+            <div id="lang-WeHelpDescription" class="lang-WeHelpDescription text                                                                                                             ">
+             Всі звіти ми щодня надаємо в соц мережах
+            </div>  
+            <div class="row">
+                <div class="col">instagram</div>
+                <div class="col">facebook</div>
+            </div>          
+           </div>
+
+      <div class="col" id = "CardMilitaryImgSection">
+            <div class="borderImg">
+            <img src="./resources/284004737_105553278839564_7385523863369335336_n.jpeg" id = "militaryImg" alt="" width=100%></img>   
+            </div>
+        </div>
+
+        <div class="col" id = "CardCgildrenImgSection">
+            <div class="borderImg">
+            <img src="./resources/Helpchildrens.jpeg" id = "childrensImg" alt="" width=100%></img>   
+            </div>
+        </div>
+        <div class="col" id = "WeHelpCardMykolaivImgSection">
+            <div class="borderImg">
+            <img src="./resources/HelpWhoThisNeeded.png" id = "weHelpImg" alt="" width=100%></img>   
+            </div>
+        </div>
+
+      </div>
+      </div> -->
+      <div class ="WeHelpContainer">
+        <h2 class="h7 font-weight-bold mb-2 font-italic" id="lang-weHelpTitle" align ="center">We help</h2>
+        <h2 class="h2 font-weight mb-2 font-italic" id="lang-weHelpDescription" align ="center">Всі звіти ми щодня надаємо в соц. мережах</h2>
+        <div class="row">
+
+        <div class="col" id = "socialNetworksInst" >
+            <a href="https://instagram.com/the_olympic_circle"><img src="./resources/instagramLogo.png" width="40"/></a>
+        </div>
+        <div class="col" id = "socialNetworksFacebook">
+            <a href="https://instagram.com/the_olympic_circle"><img src="./resources/facebookLogo.png" width="40"/></a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-11 mx-auto">
+          <!-- FIRST EXAMPLE ===================================-->
+          <div class="row py-5">
+            <div class="col-lg-4">
+              <figure class="rounded p-3 bg-white shadow-sm">
+                <img src="./resources/experienceWomen.jpeg" alt="" class="w-100 card-img-top">
+                <figcaption class="p-4 card-img-bottom">
+                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="lang-millitaryHelp">Millitary</h2>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4">
+              <figure class="rounded p-3 bg-white shadow-sm">
+                <img src="./resources/HelpChlidrenMykolaiv.jpeg" alt="" class="w-100 card-img-top">
+                <figcaption class="p-4 card-img-bottom">
+                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="lang-childrensHelp">Childrens</h2>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4">
+              <figure class="rounded p-3 bg-white shadow-sm">
+                <img src="./resources/HelpBootstrapWhoNeeded.jpeg" alt="" class="w-100 card-img-top">
+                <figcaption class="p-4 card-img-bottom">
+                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="lang-othersHelp">Who needed</h2>                
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+</body>
+<style>
+#socialNetworksInst img {
+    margin-left: 45%;
+    position: relative;
+}
+#socialNetworksFacebook img{
+    margin-right: 45%;
+    position: relative;
+}
+#socialNetworksInst {
+    text-align-last: center;
+    margin-left: 15%;
+}
+
+#HelpMykolaiv {
+    color: #2a52be;
+    font-size: 60px;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+#TitleQuadroSection {
+    font-size: x-large;
+}
+
+#TextQuadroSection {
+    font-size: small;
+    padding-top: 10px;
+}
+
+#PriceQuadroSection {
+    font-family: serif;
+    font-size: xx-large;
+    padding-top: 20px;
+}
+
+#rightCardQuadroSection {
+    border-color: blue;
+    background-color: #F5D990;          
+    border-radius: 40px 40px 40px 40px;
+}
+#ImageQuadroSection {
+    border-radius: 40px 40px 40px 40px;
+}
+#rightCardMykolaivImgSection {
+    border-radius: 40px 40px 40px 40px;
+}
+#ImageMykolaiv {
+    border-radius: 40px 40px 40px 40px;
+}
+.MainDonateTarget {
+    position: relative;
+    z-index:1;
+    overflow:hidden; 
+}
+#container-WhoWeAre {
+    margin-top: 100px;
+}
+#whoWeAreImage img {
+    border-radius: 60px 60px 60px 60px;
+    max-width: min-content;
+    width: -webkit-fill-available;
+    margin: 70px;
+}
+#lang-WhoWeAre_Title {
+    width: fit-content;
+    font-size: xx-large;
+}
+
+
+#lang-WhoWeAre_Description p {   
+text-align: center;
+width:50%;
+padding-top: 2%;
+}
+#lang-WhoWeAre_Description {   
+text-align: -webkit-center;
+width: 60%;
+text-align: -webkit-center;
+margin: 2%;
+}
+
+#lang-experienceTitle {
+    font-size: xx-large;
+    text-align: -webkit-center;
+}
+#whoWeAreExperience-row {
+    margin-top: 100px;
+}
+
+#lang-loveMykolaivTitle {
+    font-size: xx-large;
+    text-align: -webkit-center;
+}
+#whoWeAreLoveMykolaiv-row {
+    margin-top: 100px;
+}
+
+#militaryImg {
+    border-radius: 40px 40px 40px 40px;
+    height: 150px;
+    width: 240px;
+    object-fit: cover;   
+}
+
+#childrensImg {
+    border-radius: 40px 40px 40px 40px;
+    object-fit: cover;   
+    height: 150px;
+    width: 240px;
+}
+#weHelpImg {
+    border-radius: 40px 40px 40px 40px;
+    object-fit: cover;   
+    height: 150px;
+    width: 240px;
+}
+#lang-weHelpTitle {
+margin-top: 5%;
+font-size: 50px;
+}
+
+#WeHelpSection {
+    margin-top: 10%;
+}
+
+
+.MainDonateTarget::before {
+    z-index:-1;
+    position:absolute;
+    margin-left: 20%;
+    right: 70%;
+    bottom: 15%;
+    content: url('./resources/OlympicCirlce.png');
+    opacity:0.25;
+}
+
+.carousel-item {
+    border: 2px solid #F5D990;
+    border-radius: 10px;
+}   
+ 
+[id*="DonationDescription"] {
+    padding: 30px;
+}
+#whoWeAreWeHelp-row{
+margin-left: 5%;
+margin-right: 0%;
+}
+/* #whoWeAreWeHelp-row img {
+    border-radius: 60px 60px 60px 60px;
+    max-width:fit-content;
+    width: -webkit-fill-available;
+    margin: 70px;
+} */
+/* [id*="ImgSection"] {
+    width: 261px;
+    height: 261px;
+} */
+
+button {
+    border-radius: 0;
+    background: center;
+    border: none;
+}
+#donate-row {
+    margin-top:10%;
+}
+.container-carousel {
+    margin-top:15%
+}
+.carousel-item img {
+    width: 10%;
+    height: 20% !important
+}
+#myCarousel .carousel-indicators {
+    position: static;
+    margin-top: 25px
+}
+#myCarousel .carousel-indicators>li {
+    width: 100px
+}
+#myCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5
+}
+#myCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+#myCarousel .carousel-indicators li:hover img {
+    opacity: 0.75
+}
+</style>
+
+<script>
+    function copyEvent(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy")
+    }
+</script>
