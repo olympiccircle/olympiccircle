@@ -1,34 +1,61 @@
 <!DOCTYPE html>
-<!-- <html> -->
-<title>Page Title</title>
+<html>
+
 <head> 
+    <title>Mikolaiv charity fund "OlympicCircle"</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" id ="bootstrap-css" >
+    <meta name="robots" content="index,follow" />
+
+    <meta name="author" content="Ivchenko Mykhailo" />
+    <meta name="description" content="Presentation site for charity fund OlympicCirlce" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" id ="bootstrap-css" >
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href ="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href ="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
    
    
 <body onload="updateLanguage()">
 <!--   "test": "echo \"Error: no test specified\" && exit 1", ------------------------------------------------------------ -->
 <main>
-    
-<sergey-import src="header" />
-<sergey-import src="donate_target" /> 
-<sergey-import src="requisites" /> 
-<sergey-import src="who_we_are" />
-<sergey-import src="we_help" />
 
+<!-- <section> -->
+<sergey-import src="header" />
+<!-- </section> -->
+
+<article id="donates">
+    <sergey-import src="donate_target" /> 
+    <sergey-import src="requisites" /> 
+</article>
+
+<article id="about_us">
+    <sergey-import src="who_we_are" />
+</article>
+
+<article id="we_help">
+    <sergey-import src="we_help" />
+</article>
+<!-- 
+<section>
+    footer
+</section> -->
 </main>
 
 </body>
+</html>
      
 
 
 <style>
+
+#header-logo {
+    float: right;
+
+}
 #goal_title {
     color: #2a52be;
     font-size: 60px;
@@ -48,9 +75,7 @@
 #goal_quadro_cost {
     font-family: serif;
     font-size: 40px; 
-    padding-top: 10px;
     text-align: center;
-
 }
 
 #rightCardQuadroSection {
@@ -84,13 +109,13 @@
     border-radius: 60px 60px 60px 60px;
     max-width: min-content;
     width: -webkit-fill-available;
-    margin: 70px;
+    margin: 30px;
 }
 #who_we_are_title {
     font-size: xx-large;
     text-align: -webkit-center;
     margin-top: 5%;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #who_we_are_description {   
@@ -105,19 +130,23 @@ width:50%;
 padding-top: 2%;
 font-size: 20px; 
 }
-
 #experience_title {
-    font-size: xx-large;
-    text-align: -webkit-center;
-    margin-top: 5%;
-    font-size: 50px;
+font-size: xx-large;
+text-align: -webkit-center;
+margin-top: 5%;
+font-size: 40px;
 }
 #experience_description {
-    font-size: 20px; 
+    text-align: center;
+    padding-top: 2%;
+    font-size: 20px;
 }
 
 #we_lov_mykolaiv_description {
     font-size: 20px; 
+    text-align: center;
+    padding-top: 2%;
+    font-size: 20px;
 }
 #we_lov_mykolaiv_title {
     font-size: xx-large;
@@ -128,8 +157,8 @@ font-size: 20px;
 
 #we_help_title {
     text-align: -webkit-center;
-    margin-top: 5%;
-    font-size: 50px;
+    margin-top: 20%;
+    font-size: 40px;
 }
 #we_help_description {
     text-align: -webkit-center;
@@ -173,13 +202,13 @@ font-size: 20px;
     text-align: -webkit-center;
 }
 .MainDonateTarget::before {
-    z-index:-1;
-    position:absolute;
+    z-index: -1;
+    position: absolute;
     margin-left: 20%;
-    right: 70%;
+    right: 40%;
     bottom: 15%;
-    content: url('./resources/OlympicCirlce.png');
-    opacity:0.25;
+    content: url(../resources/OlympicCirlce.png);
+    opacity: 10%;
 }
 
 .carousel-item {
@@ -246,10 +275,13 @@ button {
  margin-top: 5%;
 }
 
-/* .p-3 {
-    padding: 2rem;
-} */
+.goal_title_desc {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 </style>
+
 <script>
     function copyEvent(id)
     {
@@ -422,6 +454,7 @@ var language = {
     // Set the content of the webpage 
     // depending on the hash value
     if  (window.location.hash == "#ru") {
+       // document.querySelector('header_about_us').textContent =language.ru.header_about_us; 
         header_about_us.textContent = language.ru.header_about_us;
         header_donations.textContent = language.ru.header_donations;
         header_contacts.textContent= language.ru.header_contacts;
@@ -553,10 +586,4 @@ var language = {
 };
 </script>
 
-<script>
-    function changeLanguage(lang)
-{
-    location.hash = lang;
-    location.reload();
-};
-</script>
+

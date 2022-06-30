@@ -1,34 +1,44 @@
 <header>
-    <div class = "header-container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid"> 
-                <a class="navbar-brand" href="#">
-                    <img src="../resources/header-img.PNG" alt="" width="45">
-              </a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="justify-content: center; text-align: center;",>
+    <a class="navbar-brand" id = "header_logo" href="javascript:void(0)" width= "150px" >
+      <img src="../resources/header-img.PNG" width="50px" style="margin-left: 13px">
+    </a>
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" id = "header_about_us"  href="#">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id = "header_donations" href="#">Donate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id = "header_contacts"  href="#">Contacts</a>
-              </li>
-            </ul>
 
-            <div class="d-flex flex-row-reverse bd-highlight"> 
-            <select ng-model='discussionsSelect' id ="select_language" class='form-control' onChange="changeLanguage(value)">
-                <option value="en" selected>🇺🇸&emsp;English</option>
-                <option value="ua">🇺🇦&emsp;Ukrainian</option>
-                <option value="ru">🇷🇺&emsp;Russian</option> 
-              </select>
-            </div>
+    <div class="navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" id = "header_about_us" href="#about_us">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id = "header_donations" href="#donates">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id = "header_contacts" href="#we_help">Link</a>
+        </li>
+      </ul>
 
-          </div>
-        </div>
-    </nav>
-</div>
+      <form class="d-flex flex-row-reverse">
+        <div width = 300px>
+        <select ng-model='discussionsSelect px-3' id ="select_language" class='form-control' onChange="changeLanguage(value)">
+          <option value="en" selected>🇺🇸&emsp;English</option>
+          <option value="ua">🇺🇦&emsp;Ukrainian</option>
+          <option value="ru">🇷🇺&emsp;Russian</option> 
+        </select>
+      </div>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
 </header>
+
+<script>
+  function changeLanguage(lang)
+{
+  location.hash = lang;
+  location.reload();
+};
+</script>
