@@ -6,73 +6,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" id ="bootstrap-css" >
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    
     <link href ="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <body>
+    <script src="https://static.parastorage.com/services/editor-elements/dist/rb_wixui.thunderbolt[PayPalButton].715cc689.bundle.min.js"></script>
+</head>
+   
+   
+<body onload="updateLanguage()">
+<!--   "test": "echo \"Error: no test specified\" && exit 1", ------------------------------------------------------------ -->
+<main>
+    
+<sergey-import src="header" />
+<sergey-import src="donate_target" /> 
+<sergey-import src="requisites" /> 
+<sergey-import src="who_we_are" />
 
-    <div class = "header-container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./resources/header-img.PNG" alt="" width="45">
-              </a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-              <li class="nav-item">
-                <a class="nav-link" id = "header_about_us"  href="#">Abous us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id = "header_donations" href="#">Donations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id = "header_contacts"  href="#">Contacts</a>
-              </li>
-            </ul>
-            <div class="d-flex flex-row-reverse bd-highlight"> 
-            <select ng-model='discussionsSelect' class='form-control' onclick="Loca('en')">
-                <option value="EN">🇺🇸&emsp;English</option>
-                <option value="UA">🇺🇦&emsp;Ukrainian</option>
-                <option value="RU">🇷🇺&emsp;Russian</option> 
-              </select>
-              </div>
-          </div>
-        </div>
-    </nav>
-    </div>
-<!-- ------------------------------------------------------------ -->
-<div class="MainDonateTarget">
-<div class="container p-3 px-5" id="donate-row">
-        <div class="row gx-1">
-          <div class="col">
-           <div id="goal_title" class="text p-3">Help Mykolaiv now</div>
-          </div>
-          <div class="col" id = "rightCardQuadroSection">
-          <div class="row ">
-            <div class="col">
-                <div class="p-3"> 
-                    <div id = "goal_quadro_title">Головна мета: </div>
-                    <div id = "goal_quadro_description">ГКвадрокоптер DJI Mavic 3 Fly More Combo для військових 
-                        на херсонському напрямку </div>
-                
-                        <div id = "goal_quadro_cost">120 000</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3">
-                <img src="./resources/dji_mavic_3_cine_premium_combo_03_l.jpeg" id = "ImageQuadroSection" alt="" width=100%></img>   
-                </div>
-            </div>
-          </div>
-          </div>
-          </div>
-        </div>
-    </div>      
+<sergey-import src="we_help" />
+
+</main>
+
+</body>
+     
 <!-------------------------------------------------------------- -->
 
-<div class="container-carousel">
+<!-- <div class="container-carousel">
     <div class="row d-flex justify-content-center mt-">
         <div class="col-md-6">
             <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
@@ -85,7 +44,7 @@
                             <div>АКЦІОНЕРНЕ ТОВАРИСТВО ‘’УКРСІББАНК’’</div>
                     </div>
                     <button type="button" onclick="copyEvent('DonationDescriptionHrn')">
-                        <img src="./resources/copy.png" width="30px"/>
+                        <img src="../resources/copy.png" width="30px"/>
                     </button>
                     </div>
                     <div class="carousel-item"> 
@@ -118,7 +77,7 @@
                             <div>Intermediary bank
                             BNP PARIBAS U.S.A. - New York Branch New York , USA SWIFT code: BNPAUS3N</div>
                         </div>
-                        <button type="button" onclick="changeLanguage">
+                        <button type="button" onclick="copyEvent('DonationDescriptionUS')">
                             <img src="./resources/copy.png" width="30px"/>
                         </button>
                     </div>
@@ -130,7 +89,28 @@
                             +380937070481
                         
                             PayPal logo with link
+                            
+                            <div id="pay-pal-button">
+                                <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_donations">
+                                    <input type="hidden" name="item_name" value="THE OLYMPIC CIRCLE">
+                                    <input type="hidden" name="item_number" value="">
+                                    <input type="hidden" name="bn" value="Wix_Donate_WPS_IL">
+                                    <input type="hidden" name="business" value="Olympiccircle@gmail.com">
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="hidden" name="notify_url" value="">
+                                    <input type="hidden" name="return" value="https://olympiccircle.wixsite.com/-the-olympic-circle/%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D0%B8">
+                                    <input type="hidden" name="cancel_return" value="https://olympiccircle.wixsite.com/-the-olympic-circle/%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D0%B8">
+                                    <input type="hidden" name="amount" value="">
+                                    <button type="submit" >
+                                    <img alt=" " class="_37YvN"  role="button"  src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" tabindex="0" aria-label="Donate via PayPal" data-testid="submit-image">
+                                    <img alt=" " class="_31jOp"  role="none"    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" data-testid="tracking-pixel-image">
+                                    </button>
+                                </form>
+                            </div>
                         </div>
+
+
                     </div>
                     <div class="carousel-item"> 
                         <div id ="DonationDescriptionBtc">
@@ -151,11 +131,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- ------------------------------------------------------------------------------ -->
-<div class="container-WhoWeAre" id ="container-WhoWeAre">
-    <div class="row d-flex justify-content-center mt-">
+<!-- <div class="container-WhoWeAre" id ="container-WhoWeAre">
+    <div class="row d-flex justify-content-center mt-2">
         <div id = "who_we_are_title">Благодійний фонд "Олімпійське коло"</div>
         <div id = "who_we_are_description">
             Хто ми? Благодійний фонд "Олімпійське коло" - організація, створена спортсменами,
@@ -171,15 +151,15 @@
         <div class="row gx-1">
           <div class="col">
            <div id="experience_title" class="lang-experienceTitle text p-3">Наш досвід</div>
-           <div id="experience_description" class="lang-experienceDescription text p-3">
+           <div id="experience_description" class="lang-experienceDescription">
             Ми маємо тримісячний досвід роботи в умовах воєнних дій.
             Зараз ми обʼєднали зусилля волонтерів в "Олімпійське коло", тому що як
             спортсмени розуміємо, тільки командна робота принесе успіх
         </div>
           </div>
-          <div class="col" id = "rightCardMykolaivImgSection">
-                <div class="p-3">
-                <img src="./resources/experienceGroup.jpeg" id = "ImageMykolaiv" alt="" width=100%></img>   
+          <div class="col" id = "rightCardMykolaivImgSection p-3 px-5">
+                <div class="p">
+                <img src="./resources/experienceGroup.jpeg" class="image" id = "ImageMykolaiv" alt="" width=100%></img>   
                 </div>
             </div>
           </div>
@@ -187,13 +167,6 @@
 
           <div class="container p-3 px-5" id="whoWeAreLoveMykolaiv-row">
             <div class="row gx-1">
-
-              <div class="col" id = "rightCardMykolaivImgSection">
-                    <div class="p-3">
-                    <img src="./resources/LoveMykolaiv.jpeg" id = "ImageMykolaiv" alt="" width=100%></img>   
-                    </div>
-                </div>
-
                 <div class="col">
                     <div id="we_lov_mykolaiv_title" class="lang-loveMykolaivTitle text p-3">Ми любимо Миколаїв</div>
                     <div id="we_lov_mykolaiv_description" class="lang-loveMykolaivDescription text p-3">
@@ -202,14 +175,22 @@
                      своєму місці - боремося за перемогу </div>
                  
                    </div>
-              </div>
-              </div>
-</div>
+
+              <div class="col" id = "rightCardMykolaivImgSection">
+                    <div class="p">
+                    <img src="./resources/LoveMykolaiv.jpeg" class="image" id = "ImageMykolaiv" alt="" width=100%></img>   
+                    </div>
+                </div>
 
 
-      <div class ="WeHelpContainer">
-        <h2 class="h7 font-weight-bold mb-2 font-italic" id="we_help_title" align ="center">We help</h2>
-        <h2 class="h2 font-weight mb-2 font-italic" id="we_help_description" align ="center">Всі звіти ми щодня надаємо в соц. мережах</h2>
+              </div>
+              </div>
+</div> -->
+
+
+      <!-- <div class ="WeHelpContainer">
+        <h2 class="h7 mb-2 font-italic" id="we_help_title" align ="center">We help</h2>
+        <div class="mb-2 font-italic" id="we_help_description" align ="center">Всі звіти ми щодня надаємо в соц. мережах</div>
         <div class="row">
 
         <div class="col" id = "socialNetworksInst" >
@@ -221,41 +202,40 @@
         </div>
         <div class="row">
         <div class="col-lg-11 mx-auto">
-          <!-- FIRST EXAMPLE ===================================-->
+           FIRST EXAMPLE ===================================
           <div class="row py-5">
             <div class="col-lg-4">
-              <figure class="rounded p-3 bg-white shadow-sm">
+              <figure class="rounded p-3 bg-white">
                 <img src="./resources/experienceWomen.jpeg" alt="" class="w-100 card-img-top">
-                <figcaption class="p-4 card-img-bottom">
+                <figcaption class="p-1 card-img-bottom">
                   <h2 class="h5 font-weight-bold mb-2 font-italic" id="we_help_text_img1">Millitary</h2>
                 </figcaption>
               </figure>
             </div>
             <div class="col-lg-4">
-              <figure class="rounded p-3 bg-white shadow-sm">
+              <figure class="rounded p-3 bg-white">
                 <img src="./resources/HelpChlidrenMykolaiv.jpeg" alt="" class="w-100 card-img-top">
-                <figcaption class="p-4 card-img-bottom">
-                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="we_help_text_img1">Childrens</h2>
+                <figcaption class="p-1 card-img-bottom">
+                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="we_help_text_img2">Childrens</h2>
                 </figcaption>
               </figure>
             </div>
             <div class="col-lg-4">
-              <figure class="rounded p-3 bg-white shadow-sm">
+              <figure class="rounded p-3 bg-white">
                 <img src="./resources/HelpBootstrapWhoNeeded.jpeg" alt="" class="w-100 card-img-top">
-                <figcaption class="p-4 card-img-bottom">
-                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="we_help_text_img1">Who needed</h2>                
+                <figcaption class="p-1 card-img-bottom">
+                  <h2 class="h5 font-weight-bold mb-2 font-italic" id="we_help_text_img3">Who needed</h2>                
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
+        </div>
+        </div> -->
 
-        <script type="module" src="./script/LocalizationUtill.js" crossorigin="anonymous"></script>
-        <script type="module" src="./script/locale.js" crossorigin="anonymous"></script>
-</body>
+
+
 <style>
-
-
 #goal_title {
     color: #2a52be;
     font-size: 60px;
@@ -268,14 +248,16 @@
 }
 
 #goal_quadro_description {
-    font-size: small;
+    font-size: 20px; 
     padding-top: 10px;
 }
 
 #goal_quadro_cost {
     font-family: serif;
-    font-size: xx-large;
-    padding-top: 20px;
+    font-size: 40px; 
+    padding-top: 10px;
+    text-align: center;
+
 }
 
 #rightCardQuadroSection {
@@ -286,6 +268,7 @@
 
 #ImageQuadroSection {
     border-radius: 40px 40px 40px 40px;
+    min-width: 175px;
 }
 
 
@@ -327,6 +310,7 @@ margin: 2%;
 text-align: center;
 width:50%;
 padding-top: 2%;
+font-size: 20px; 
 }
 
 #experience_title {
@@ -335,7 +319,13 @@ padding-top: 2%;
     margin-top: 5%;
     font-size: 50px;
 }
+#experience_description {
+    font-size: 20px; 
+}
 
+#we_lov_mykolaiv_description {
+    font-size: 20px; 
+}
 #we_lov_mykolaiv_title {
     font-size: xx-large;
     text-align: -webkit-center;
@@ -343,18 +333,31 @@ padding-top: 2%;
     font-size: 50px;
 }
 
+#we_help_title {
+    text-align: -webkit-center;
+    margin-top: 5%;
+    font-size: 50px;
+}
+#we_help_description {
+    text-align: -webkit-center;
+    font-size: 20px;   
+    margin-bottom: 3%;
+}
 #WeHelpContainer {
     margin-top: 10%;
 }
 #whoWeAreLoveMykolaiv-row {
-    margin-top: 100px;
+    margin-top: 10%;
 }
-
+.col-lg-4 img {
+    border-radius: 15px 15px 15px 15px;
+}
 #we_help_text_img1 {
     border-radius: 40px 40px 40px 40px;
     height: 150px;
     width: 240px;
-    object-fit: cover;   
+    object-fit: cover;  
+    font-size: 30px; 
 }
 
 #we_help_text_img2 {
@@ -362,15 +365,20 @@ padding-top: 2%;
     object-fit: cover;   
     height: 150px;
     width: 240px;
+    font-size: 30px; 
 }
 #we_help_text_img3 {
     border-radius: 40px 40px 40px 40px;
     object-fit: cover;   
     height: 150px;
     width: 240px;
+    font-size: 30px; 
+    
 }
 
-
+.card-img-bottom {
+    text-align: -webkit-center;
+}
 .MainDonateTarget::before {
     z-index:-1;
     position:absolute;
@@ -406,7 +414,6 @@ button {
     margin-top:15%
 }
 .carousel-item img {
-    width: 10%;
     height: 20% !important
 }
 #myCarousel .carousel-indicators {
@@ -441,6 +448,14 @@ button {
     text-align-last: center;
     margin-left: 15%;
 }
+.image{
+ min-width: 300px;
+ margin-top: 5%;
+}
+
+/* .p-3 {
+    padding: 2rem;
+} */
 </style>
 <script>
     function copyEvent(id)
@@ -450,8 +465,272 @@ button {
         document.execCommand("Copy")
         
     }
+</script>
 
      
 
+ <script>
+
+
+
+function updateLanguage() {
+   ///=================================Language variable initializing start ==============================
+var language = {  
+    eng: {
+        header_about_us:
+        "About us",
+        header_donations:
+        "Donate",
+        header_contacts:
+        "Contacts",
+        goal_title:
+        "Help Mykolaiv now!",
+
+        ///Quadro Section
+        goal_quadro_title:
+        "Main goal:",
+        goal_quadro_description:
+        "Quadcopter DJI Mavic 3 Fly More Combo for the military for the Zaporozhye hot points",
+        goal_quadro_cost:
+        "120 000 uah",
+
+        who_we_are_title:
+        "Charity Fund \"Olympic Circle\"",
+        who_we_are_description:
+        "Who are we? Olympic Circle Charity Fund - an organization created by athletes to help Nikolaev in the fight against Russian invaders.",
+
+        experience_title:
+        "Our experience",
+        experience_description:
+        "We have three-month experience in hostilities. We now combined volunteer efforts into the Olympic Circle, because as athletes understand, only teamwork will bring success",
+
+        we_lov_mykolaiv_title:
+        "We love Mykolaiv",
+        we_lov_mykolaiv_description:
+        "Need translae",
+
+        we_help_title:
+        "We help",
+        we_help_description:
+        "We provide all reports daily in social networks",
+        we_help_text_img1:
+        "Military",
+        we_help_text_img2:
+        "Children",
+        we_help_text_img3:
+        "Those who need it"
+    },
     
+//===============================UA section=======================================>
+    
+    ua: {
+        header_about_us:
+        "Про нас",
+        header_donations:
+        "Донат",
+        header_contacts:
+        "Контакти",
+        goal_title:
+        "Допоможи Миколаєву зараз",
+
+        ///Quadro Section
+        goal_quadro_title:
+        "Головна мета:",
+        goal_quadro_description:
+        "Квадрокоптер DJI Mavic 3 Fly More Combo для військових на запорізькому напрямку",
+        goal_quadro_cost:
+        "120 000 грн.",
+
+        who_we_are_title:
+        "Благодійний фонд \"Олімпійське коло\"",
+        who_we_are_description:
+        "Хто ми? Благодійний фонд \"Олімпійське коло\" - організація, створена спортсменами, щоб допомогати Миколаєву в боротьбі з російськими окупантами.",
+
+        experience_title:
+        "Наш досвід",
+        experience_description:
+        "Ми маємо тримісячний досвід роботи в умовах воєнних дій. Зараз ми обʼєднали зусилля волонтерів в \"Олімпійське коло\", тому що як спортсмени розуміємо, тільки командна робота принесе успіх",
+
+        we_lov_mykolaiv_title:
+        "Ми любимо Миколаїв",
+        we_lov_mykolaiv_description:
+        "Ми просто миколаївці, які люблять своє місто. Кожного ранку ми прокидаємося з такою думкою, що й ви: коли закінчиться війна. А далі, робимо, що й кожен українець на своєму місці - боремося за перемогу",
+        we_help_title:
+        "Ми допомогаємо",
+        we_help_description:
+        "Всі звіти ми щодня надаємо в соціальних мережах",
+        
+        we_help_text_img1:
+        "Військовим",
+        we_help_text_img2:
+        "Дітям",
+        we_help_text_img3:
+        "Тим хто потребує"
+
+    },
+
+
+//=============================== 🐷 RU section=======================================>
+    
+    ru: {
+        header_about_us:
+        "О нас",
+        header_donations:
+        "Донат",
+        header_contacts:
+        "Контакты",
+        goal_title:
+        "Помоги Николаеву сейчас",
+
+        ///Quadro Section
+        goal_quadro_title:
+        "Цель:",
+        goal_quadro_description:
+        "Квадрокоптер DJI Mavic 3 Fly More Combo для военных на запорожском направлении",
+        goal_quadro_cost:
+        "120 000 грн.",
+
+        who_we_are_title:
+        "Благотворительний фонд \"Олимпийский круг\"",
+        
+        who_we_are_description:
+        "Кто мы? Благотворительный фонд \"Олимпийский круг\" организация, созданная спортсменами для помощи Николаеву в борьбе с российскими оккупантами",
+
+        experience_title:
+        "Наш опыт",
+        experience_description:
+        "Мы имеем трехмесячный опыт работы в условиях боевых действий. Сейчас мы объеденили усилия волонтеров в олимпийский круг, потому что как спортсмены понимаем, только командная работа принесёт успех",
+
+        we_lov_mykolaiv_title:
+        "Мы любим Николаев",
+        we_lov_mykolaiv_description:
+        "Мы просто жители Николаева, которые любят свой город. Каждое утро мы просыпаемся с той же мыслью, что и вы: когда закончится война. А дальше делаем то же, что и каждый украинец на своём месте - боремся за победу!",
+
+        we_help_title:
+        "Мы помогаем",
+        we_help_description:
+        "Все отчеты мы каждый день предоставляем в социальных сетях",
+        we_help_text_img1:
+        "Военным",
+        we_help_text_img2:
+        "Детям",
+        we_help_text_img3:
+        "Тем кто нуждается"
+    }
+}
+  
+
+
+
+//===============================lang variable initializing END===============================
+
+  // Check if a hash value exists in the URL
+  if (window.location.hash) {
+
+    // Set the content of the webpage 
+    // depending on the hash value
+    if (window.location.hash == "#en") {
+
+        header_about_us.textContent = language.eng.header_about_us;
+        header_donations.textContent = language.eng.header_donations;
+        header_contacts.textContent= language.eng.header_contacts;
+
+        goal_title.textContent = language.eng.goal_title;
+        goal_quadro_description.textContent = language.eng.goal_quadro_description;
+        goal_quadro_cost.textContent = language.eng.goal_quadro_cost;
+
+        who_we_are_title.textContent = language.eng.who_we_are_title;
+        
+        who_we_are_description.textContent = language.eng.who_we_are_description;
+
+        experience_title.textContent = language.eng.experience_title;
+        experience_description.textContent = language.eng.experience_description;
+
+        we_lov_mykolaiv_title.textContent = language.eng.we_lov_mykolaiv_title;
+        we_lov_mykolaiv_description.textContent = language.eng.we_lov_mykolaiv_description;
+
+        we_help_title.textContent = language.eng.we_help_title;
+        we_help_description.textContent = language.eng.we_help_description;
+
+        we_help_text_img1.textContent = language.eng.we_help_text_img1;
+        we_help_text_img2.textContent = language.eng.we_help_text_img2;
+        we_help_text_img3.textContent = language.eng.we_help_text_img3;
+
+
+
+
+       select_language.selectedIndex = 0; //target language in the language-selector
+    }
+    else if (window.location.hash == "#ua") {
+
+        header_about_us.textContent = language.ua.header_about_us;
+        header_donations.textContent = language.ua.header_donations;
+        header_contacts.textContent= language.ua.header_contacts;
+
+        goal_title.textContent = language.ua.goal_title;
+        goal_quadro_description.textContent = language.ua.goal_quadro_description;
+        goal_quadro_cost.textContent = language.ua.goal_quadro_cost;
+
+        who_we_are_title.textContent = language.ua.who_we_are_title;
+        
+        who_we_are_description.textContent = language.ua.who_we_are_description;
+
+        experience_title.textContent = language.ua.experience_title;
+        experience_description.textContent = language.ua.experience_description;
+
+        we_lov_mykolaiv_title.textContent = language.ua.we_lov_mykolaiv_title;
+        we_lov_mykolaiv_description.textContent = language.ua.we_lov_mykolaiv_description;
+
+        we_help_title.textContent = language.ua.we_help_title;
+        we_help_description.textContent = language.ua.we_help_description;
+
+        we_help_text_img1.textContent = language.ua.we_help_text_img1;
+        we_help_text_img2.textContent = language.ua.we_help_text_img2;
+        we_help_text_img3.textContent = language.ua.we_help_text_img3;
+
+
+
+        
+        select_language.selectedIndex = 1; //target language ua in the language-selector
+    }
+    else if (window.location.hash == "#ru") {
+        header_about_us.textContent = language.ru.header_about_us;
+        header_donations.textContent = language.ru.header_donations;
+        header_contacts.textContent= language.ru.header_contacts;
+
+        goal_title.textContent = language.ru.goal_title;
+        goal_quadro_description.textContent = language.ru.goal_quadro_description;
+        goal_quadro_cost.textContent = language.ru.goal_quadro_cost;
+
+        who_we_are_title.textContent = language.ru.who_we_are_title;
+        
+        who_we_are_description.textContent = language.ru.who_we_are_description;
+
+        experience_title.textContent = language.ru.experience_title;
+        experience_description.textContent = language.ru.experience_description;
+
+        we_lov_mykolaiv_title.textContent = language.ru.we_lov_mykolaiv_title;
+        we_lov_mykolaiv_description.textContent = language.ru.we_lov_mykolaiv_description;
+
+        we_help_title.textContent = language.ru.we_help_title;
+        we_help_description.textContent = language.ru.we_help_description;
+
+        we_help_text_img1.textContent = language.ru.we_help_text_img1;
+        we_help_text_img2.textContent = language.ru.we_help_text_img2;
+        we_help_text_img3.textContent = language.ru.we_help_text_img3;
+
+         
+        select_language.selectedIndex = 2; //target language ua in the language-selector
+    }
+  }
+
+};
+</script>
+
+<script>
+    function changeLanguage(lang)
+{
+    location.hash = lang;
+    location.reload();
+};
 </script>
