@@ -23,9 +23,7 @@
 <!--   "test": "echo \"Error: no test specified\" && exit 1", ------------------------------------------------------------ -->
 <main>
 
-<!-- <section> -->
 <sergey-import src="header" />
-<!-- </section> -->
 
 <article id="donates">
     <sergey-import src="donate_target" /> 
@@ -39,10 +37,6 @@
 <article id="we_help">
     <sergey-import src="we_help" />
 </article>
-<!-- 
-<section>
-    footer
-</section> -->
 </main>
 
 </body>
@@ -455,7 +449,6 @@ var language = {
     // Set the content of the webpage 
     // depending on the hash value
     if  (window.location.hash == "#ru") {
-       // document.querySelector('header_about_us').textContent =language.ru.header_about_us; 
         header_about_us.textContent = language.ru.header_about_us;
         header_donations.textContent = language.ru.header_donations;
         header_contacts.textContent= language.ru.header_contacts;
@@ -532,7 +525,6 @@ var language = {
         goal_quadro_cost.textContent = language.eng.goal_quadro_cost;
 
         who_we_are_title.textContent = language.eng.who_we_are_title;
-        
         who_we_are_description.textContent = language.eng.who_we_are_description;
 
         experience_title.textContent = language.eng.experience_title;
