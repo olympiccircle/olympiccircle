@@ -1,7 +1,7 @@
 <requisites>
     <div class="container-carousel">
         <div class="row d-flex justify-content-center mt-1">
-            <div class="col-md-6">
+            <div class="col-md-6" style="z-index: 1">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center" style="
                 padding: 15px;">
                     <div class="carousel-inner">
@@ -11,10 +11,10 @@
                                 <div>ЄДРПОУ 44818535</div>
                                 <div>Рахунок UA373510050000026005879147002</div>
                                 <div>АКЦІОНЕРНЕ ТОВАРИСТВО ‘’УКРСІББАНК’’</div>
-                        </div>
-                        <button type="button" onclick="copyEvent('DonationDescriptionHrn')">
-                            <img src="../resources/copy.png" width="30px" style="
-                            margin-bottom: 10px"/>
+                            </div>
+                        <button class="copyButton" onclick="copyEvent('DonationDescriptionHrn')">
+                            <!-- <img src="../resources/copy.png" /> -->
+                            <img src="./resources/copypng.png" width="30px"/>
                         </button>
                         </div>
                         <div class="carousel-item"> 
@@ -29,10 +29,9 @@
                                 ANDRIIVSKA STREET 2/12 KYIV, UKRAINE SWIFT code: KHABUA2K</div>
                                 <div>Intermediary bank
                                 BNP PARIBAS SA Paris, FRANCE SWIFT code: BNPAFRPP</div>
-                        </div>
-                        <button type="button" onclick="copyEvent('DonationDescriptionEu')">
-                            <img src="../resources/copy.png" style="
-                            margin-bottom: 10px;" width="30px"/>
+                            </div>
+                        <button class="copyButton" onclick="copyEvent('DonationDescriptionEu')">
+                            <img src="./resources/copypng.png" width="30px"/>
                         </button>  
                     </div>
                         <div class="carousel-item">
@@ -48,9 +47,9 @@
                                 <div>Intermediary bank
                                 BNP PARIBAS U.S.A. - New York Branch New York , USA SWIFT code: BNPAUS3N</div>
                             </div>
-                            <button type="button" onclick="copyEvent('DonationDescriptionUS')">
-                                <img src="../resources/copy.png" style="
-                                margin-bottom: 10px" width="30px"/>
+                            <button class="copyButton" onclick="copyEvent('DonationDescriptionUsd')">
+                                <!-- <img src="../resources/copy.png" /> -->
+                                <img src="./resources/copypng.png" width="30px"/>
                             </button>
                         </div>
     
@@ -84,8 +83,9 @@
                             <div id ="DonationDescriptionBtc">
                                 1C4RGzyJmQWp6ARWNMRDfJgX4ufwjdmBQC
                             </div>
-                            <button type="button" onclick="('DonationDescriptionBtc')">
-                                <img src="../resources/copy.png" width="30px"/>
+                            <button class="copyButton" onclick="copyEvent('DonationDescriptionBtc')">
+                                <img src="./resources/copypng.png" width="30px"/>
+                                <!-- <i class="ph-copy"></i> <img src="../resources/copy.png"/> -->
                             </button>
                         </div>
                     </div>
