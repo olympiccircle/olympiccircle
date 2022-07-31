@@ -80,7 +80,7 @@
 }
 
 #ImageQuadroSection {
-    border-radius: 40px 40px 40px 40px;
+    /* border-radius: 40px 40px 40px 40px; */
     min-width: 175px;
 }
 
@@ -99,6 +99,7 @@
 }
 #container-WhoWeAre {
     /* margin-top: 100px; */
+    text-align: center;
 }
 #whoWeAreImage img {
     border-radius: 60px 60px 60px 60px;
@@ -207,7 +208,7 @@ text-align: -webkit-center;
     font-weight: bold;
 }
 [id*="description"] {
-    font-size: 20px;
+    font-size: 24px;
 }
 #whoWeAreWeHelp-row{
 margin-left: 5%;
@@ -312,6 +313,34 @@ button {
 #we_help {
     margin-top: 100px;
 }
+.lang-we-did-it-title {
+    margin-top: 100px;
+    text-align: center;
+}
+.lang-we-did-it-description {
+text-align: center;
+}
+.donate-complete{
+    padding-top: 100px;
+}
+
+.donate-complete img{
+    border-radius: 60px 60px 60px 60px;
+    width: -webkit-fill-available;
+    margin: 30px;
+    max-width: 90%;
+} 
+
+#we_did_it_description{
+    padding-top: 50px;
+    font-size: xx-large;
+    text-align: -webkit-center;
+}
+#we_did_it_pre_description {
+    padding-top: 50px;
+    font-size: xx-large;
+    text-align: -webkit-center;
+}
 </style>
 
 <script>
@@ -348,9 +377,13 @@ var language = {
         goal_quadro_title:
         "Main goal",
         goal_quadro_description:
-        "Quadcopter DJI Mavic 3 Fly More Combo for the military in the Zaporozhye hot points",
+        "the thermal imager will ensure the visibility of the enemy at night!  let's help together",
         goal_quadro_cost_title:
-        "UAH 120 000",
+        "UAH 80 000",
+    
+        we_did_it_title: "We did it together!",
+        we_did_it_pre_description: "Thanks to all!",
+        we_did_it_description:"collection on well completed ! And helps the fighters on the front",
 
         who_we_are_title:
         "Charity Fund \"Olympic Circle\"",
@@ -397,9 +430,12 @@ var language = {
         goal_quadro_title:
         "Головна мета",
         goal_quadro_description:
-        "Квадрокоптер DJI Mavic 3 Fly More Combo для військових на запорізькому напрямку",
+        "Тепловізор забезпечить видимість ворога вночі! допоможемо разом",
         goal_quadro_cost_title:
-        "120 000 грн",
+        "80 000 грн",
+        we_did_it_title: "Ми зробили це разом!",
+        we_did_it_pre_description: "Дякуємо усім!",
+        we_did_it_description:"Збір завершено! Квадракоптер вже допомогає бійцям на фронті",
 
         who_we_are_title:
         "Благодійний фонд \"Олімпійське коло\"",
@@ -448,15 +484,20 @@ var language = {
         goal_quadro_title:
         "Цель",
         goal_quadro_description:
-        "Квадрокоптер DJI Mavic 3 Fly More Combo для военных на запорожском направлении",
+        "Тепловизор обеспечит видимость противника ночью! давайте поможем вместе",
         goal_quadro_cost_title:
-        "120 000 грн",
+        "80 000 грн",
+
+        we_did_it_title: "Мы сделали это вместе!",
+        we_did_it_pre_description: "Спасибо всем!",
+        we_did_it_description:"Сбор завершен! Квадракоптер уже помогает бойцам на фронте",
 
         who_we_are_title:
         "Благотворительний фонд \"Олимпийский круг\"",
         
         who_we_are_description:
         "Благотворительный фонд «Олимпийский круг» — организация, созданная спортсменами для помощи Николаеву в борьбе с российскими оккупантами. У нас есть трехмесячный опыт работы во время войны. Сейчас мы объединили усилия волонтеров в «Олимпийский круг», потому что, будучи спортсменами, понимаем, что только командная работа будет успешной. Мы николаевцы, которые любят свой город. Каждое утро мы просыпаемся с той же мыслью, что и вы - когда же кончится война. Дальше делаем то же, что и любой украинец на его месте - боремся за Победу.",
+
 
         experience_title:
         "Наш опыт",
@@ -503,6 +544,10 @@ var language = {
         goal_quadro_description.textContent = language.ru.goal_quadro_description;
         goal_quadro_cost_title.textContent = language.ru.goal_quadro_cost_title;
 
+        we_did_it_title.textContent =language.ru.we_did_it_title;
+        we_did_it_pre_description.textContent =language.ru.we_did_it_pre_description;
+        we_did_it_description.textContent =language.ru.we_did_it_description;
+
         who_we_are_title.textContent = language.ru.who_we_are_title;
         
         who_we_are_description.textContent = language.ru.who_we_are_description;
@@ -536,6 +581,10 @@ var language = {
         goal_quadro_description.textContent = language.ua.goal_quadro_description;
         goal_quadro_cost_title.textContent = language.ua.goal_quadro_cost_title;
 
+        we_did_it_title.textContent =language.ua.we_did_it_title;
+        we_did_it_pre_description.textContent =language.ua.we_did_it_pre_description;
+        we_did_it_description.textContent =language.ua.we_did_it_description;
+
         who_we_are_title.textContent = language.ua.who_we_are_title;
         who_we_are_description.textContent = language.ua.who_we_are_description;
 
@@ -553,7 +602,6 @@ var language = {
         we_help_text_img3.textContent = language.ua.we_help_text_img3;
 
 
-
         
         select_language.selectedIndex = 1; //target language ua in the language-selector
     } else if (window.location.hash == "#en") {
@@ -565,9 +613,13 @@ var language = {
 
         goal_title.textContent = language.eng.goal_title;
 
-        goal_quadro_title.textContent = language.en.goal_quadro_title
+        goal_quadro_title.textContent = language.eng.goal_quadro_title
         goal_quadro_description.textContent = language.eng.goal_quadro_description;
         goal_quadro_cost_title.textContent = language.eng.goal_quadro_cost_title;
+        
+        we_did_it_title.textContent =language.eng.we_did_it_title;
+        we_did_it_pre_description.textContent =language.eng.we_did_it_pre_description;
+        we_did_it_description.textContent =language.eng.we_did_it_description;
 
         who_we_are_title.textContent = language.eng.who_we_are_title;
         who_we_are_description.textContent = language.eng.who_we_are_description;
@@ -590,7 +642,7 @@ var language = {
     }
     
   } else {
-        header_goal.textContent = language.en.header_goal;
+        header_goal.textContent = language.eng.header_goal;
         header_about_us.textContent = language.eng.header_about_us;
         header_donations.textContent = language.eng.header_donations;
         header_contacts.textContent= language.eng.header_contacts;
@@ -600,6 +652,10 @@ var language = {
         goal_quadro_title.textContent = language.en.goal_quadro_title
         goal_quadro_description.textContent = language.eng.goal_quadro_description;
         goal_quadro_cost_title.textContent = language.eng.goal_quadro_cost_title;
+
+        we_did_it_title.textContent = language.eng.we_did_it_title;
+        we_did_it_pre_description.textContent =language.eng.we_did_it_pre_description;
+        we_did_it_description.textContent =language.eng.we_did_it_description;
 
         who_we_are_title.textContent = language.eng.who_we_are_title;
         
